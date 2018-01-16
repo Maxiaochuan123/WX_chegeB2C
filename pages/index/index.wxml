@@ -1,0 +1,87 @@
+<view class='head'>
+  <!--  搜索栏  -->
+  <view class="search-impression">
+    <view class='GPS-location'>
+      <text class='iconfont icon-dingwei'></text>
+      <text>{{GPSLocation.city}}</text>
+    </view>
+    <view class='searchBox' animation="{{animationData}}">
+      <view class='search-outfocus' wx:if='{{sherchMaskedShow == true}}' animation="{{changeOpacity}}">
+        <text class='iconfont icon-sousuo'></text>
+        <input confirm-type='search' placeholder='搜索'></input>
+        <view class='clear' bindtap='clear_btn'>
+        </view>
+      </view>
+    </view>
+    <view class='phone' bindtap='callPhone'>
+      <text class='iconfont icon-dianhua' style='color:#fff;font-size:22px;line-height:40px;'></text>
+    </view>
+
+    <!-- 搜索栏遮罩层  -->
+    <view class='search-masked' bindtap='search_masked_hidden' wx:if='{{sherchShow != false}}'>
+      <text class='iconfont icon-sousuo'></text>
+      <text class='search-text'>搜索</text>
+    </view>
+  </view>
+
+  <!--  轮播  -->
+  <swiper class='slideshow' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicatorDots="{{indicatorDots}}" circular="{{circular}}" indicator-active-color='#fff'>
+    <block wx:for="{{imgUrls}}" wx:key="item">
+      <swiper-item>
+        <image src='{{item.url}}' data-link="{{item.link}}" bindtap="bindViewTap" style='width:100%;height:100%;'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='body'>
+  <view class='sudokuBox'>
+    <!--  九宫格盒子  -->
+    <view class='sudoku'>
+      <view>1</view>
+      <view>2</view>
+      <view>3</view>
+      <view>4</view>
+    </view>
+    <!--  九宫格文字  -->
+    <view class='sudokuText'>
+      <text>1</text>
+      <text>2</text>
+      <text>3</text>
+      <text>4</text>
+    </view>
+    <!--  横向滚动图  -->
+    <scroll-view scroll-x="true">
+      <view class="crosswiseWiper">
+        <view>
+          <image src="../../images/6.jpg" style='padding-right: 0 !important;'></image>
+        </view>
+        <view>
+          <image src="../../images/7.jpg"></image>
+        </view>
+        <view>
+          <image src="../../images/6.jpg"></image>
+        </view>
+        <view>
+          <image src="../../images/7.jpg"></image>
+        </view>
+        <view>
+          <image src="../../images/6.jpg"></image>
+        </view>
+        <view>
+          <image src="../../images/7.jpg"></image>
+        </view>
+        <view>
+          <image src="../../images/6.jpg"></image>
+        </view>
+        <view>
+          <image src="../../images/7.jpg"></image>
+        </view> 
+      </view>
+    </scroll-view>
+    <view style='height:300px;border:1px solid blue'>
+      <!--  客服按钮  -->
+      <contact-button class='service1' size='27' type='default-dark'></contact-button>
+      <image class='service2' src='../../icon/客服.jpg'></image>
+    </view>
+  </view>
+</view>

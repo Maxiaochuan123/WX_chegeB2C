@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/startPage/startPage",
+    "pages/index/index",
+    "pages/shoppingMall/shoppingMall",
+    "pages/findCar/findCar",
+    "pages/message/message",
+    "pages/personalCenter/personalCenter"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#787879",
+    "selectedColor": "#00A8E7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "tabBar/首页.png",
+        "selectedIconPath": "tabBar/首页(选中).png"
+      },
+      {
+        "pagePath": "pages/shoppingMall/shoppingMall",
+        "text": "商城",
+        "iconPath": "tabBar/商城.png",
+        "selectedIconPath": "tabBar/商城(选中).png"
+      },
+      {
+        "pagePath": "pages/findCar/findCar",
+        "text": "寻车",
+        "iconPath": "tabBar/寻车.png",
+        "selectedIconPath": "tabBar/寻车(选中).png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "tabBar/DPI-消息.png",
+        "selectedIconPath": "tabBar/DPI-消息(选中).png"
+      },
+      {
+        "pagePath": "pages/personalCenter/personalCenter",
+        "text": "个人中心",
+        "iconPath": "tabBar/个人中心.png",
+        "selectedIconPath": "tabBar/个人中心(选中).png"
+      }
+    ]
+  }
+}

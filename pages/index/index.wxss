@@ -1,0 +1,203 @@
+/*  搜索栏  */
+
+.search-impression {
+  width: 100%;
+  height: 68rpx;
+  background-color: #666;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  padding-top: 14rpx;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.search-outfocus, .search-masked {
+  height: 56rpx;
+  background-color: #fff;
+  border-radius: 14rpx;
+  flex-grow: 1;
+  margin-right: 12rpx;
+  padding-left: 12rpx;
+  position: relative;
+}
+
+.search-outfocus {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 86%;
+}
+
+.searchBox {
+  opacity: 0.2;
+  width: 40%;
+}
+
+.search-outfocus input {
+  margin-top: 3rpx;
+  font-size: 30rpx;
+  padding-left: 8rpx;
+  width: 84%;
+}
+
+/* .search-outfocus .search-icon{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 4px;
+} */
+
+.search-outfocus .clear {
+  width: 40px;
+  height: 28px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.search-outfocus .clear icon {
+  position: absolute;
+  right: 4px;
+  top: 3px;
+}
+
+.icon-sousuo {
+  color: #85898c;
+}
+
+.phone {
+  width: 40px;
+  height: 40px;
+  /* background-color:red;  */
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+}
+
+/* 搜索框遮罩层 */
+
+.search-masked {
+  position: absolute;
+  width: 62%;
+  margin-left: 22%;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .search-masked .search-icon{
+  width: 32rpx;
+  height: 32rpx;
+} */
+
+.search-masked .search-text {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #959595;
+}
+
+/* 定位 */
+
+.GPS-location {
+  height: 56rpx;
+  padding-right: 12rpx;
+  display: flex;
+  align-items: flex-start;
+}
+
+.GPS-location .location-icon {
+  width: 38rpx;
+  height: 38rpx;
+  margin-top: 8rpx;
+  padding-left: 4rpx;
+}
+
+.GPS-location text {
+  font-size: 30rpx;
+  line-height: 56rpx;
+  padding-left: 6rpx;
+  color: #fff;
+}
+
+/*  轮播图  */
+
+.slideshow {
+  height: 380rpx;
+}
+
+/*  九宫格  */
+
+.body {
+  margin-top: 24rpx;
+}
+
+.sudokuBox {
+  width: 100%;
+}
+
+.sudoku, .sudokuText {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.sudoku view {
+  width: 130rpx;
+  height: 130rpx;
+  line-height: 150rpx;
+  color: #fff;
+  text-align: center;
+  background-color: #f60;
+  border-radius: 50%;
+}
+
+.sudokuText text {
+  width: 20%;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  color: #959595;
+  margin-top: 4px;
+}
+
+/*  横向滚动图片  */
+
+.crosswiseWiper {
+  height: 170rpx;
+  width: 100%;
+  display: -webkit-box;
+}
+.crosswiseWiper view{
+  width: 260rpx;
+  height: 165rpx;
+  margin: 0 8rpx;
+}
+
+ .crosswiseWiper view image {
+  width: 260rpx;
+  height: 170rpx;
+} 
+.crosswiseWiper view:first-child{
+   margin-left: 0; 
+} 
+.crosswiseWiper view:last-child{
+   margin-right: 0; 
+} 
+
+/*  客服  */
+.service1{
+  width: 50px;
+  height: 50px;
+  border: 1px solid blue;
+  position: absolute;
+  left: 4px;
+  opacity: 0;
+}
+.service2{
+  width: 50px;
+  height: 50px;
+  border: 1px solid red;
+}

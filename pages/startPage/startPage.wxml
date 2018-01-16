@@ -1,0 +1,6 @@
+<view class='head'>
+  <text>活动页（{{num}}）</text>
+</view>
+<view class='body'>
+  
+</view>
