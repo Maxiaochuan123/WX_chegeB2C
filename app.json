@@ -1,11 +1,15 @@
 {
   "pages": [
-    "pages/startPage/startPage",
-    "pages/index/index",
     "pages/shoppingMall/shoppingMall",
     "pages/findCar/findCar",
-    "pages/message/message",
-    "pages/personalCenter/personalCenter"
+    "pages/index/index",
+    "pages/personalCenter/personalCenter",
+    "pages/informationForDetails/informationForDetails",
+    "pages/carInformation/carInformation",
+    "pages/login/login",
+    "pages/myFindCar/myFindCar",
+    "pages/myCollectionCar/myCollectionCar",
+    "pages/myReservationVehicle/myReservationVehicle"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,23 +27,17 @@
         "iconPath": "tabBar/首页.png",
         "selectedIconPath": "tabBar/首页(选中).png"
       },
+			{
+				"pagePath": "pages/findCar/findCar",
+				"text": "寻车",
+				"iconPath": "tabBar/寻车.png",
+				"selectedIconPath": "tabBar/寻车(选中).png"
+			},
       {
         "pagePath": "pages/shoppingMall/shoppingMall",
         "text": "商城",
         "iconPath": "tabBar/商城.png",
         "selectedIconPath": "tabBar/商城(选中).png"
-      },
-      {
-        "pagePath": "pages/findCar/findCar",
-        "text": "寻车",
-        "iconPath": "tabBar/寻车.png",
-        "selectedIconPath": "tabBar/寻车(选中).png"
-      },
-      {
-        "pagePath": "pages/message/message",
-        "text": "消息",
-        "iconPath": "tabBar/DPI-消息.png",
-        "selectedIconPath": "tabBar/DPI-消息(选中).png"
       },
       {
         "pagePath": "pages/personalCenter/personalCenter",

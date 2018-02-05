@@ -1,0 +1,13 @@
+<view class='body'>
+  <view class='list' wx:for='{{charData}}' wx:key="item">
+    <view class='brand'>
+      <text>品牌:</text>
+      <text>{{item.brand}}</text>
+    </view>
+    <view class='carsModels'>
+      <text>车系车型:</text>
+      <text>{{item.carsModels}}</text>
+    </view>
+    <text class='theDateOf'>{{item.theDateOf}}</text>
+  </view>
+</view>

@@ -1,0 +1,246 @@
+/*  遮罩层动画  */
+@keyframes activeSortAnimation
+{
+  0%  {height: 0%;}
+  100%  {height: 100%;}
+}
+/*  滚动触发磁铁动画  */
+@keyframes scorlTop
+{
+  0%  {top: 0;}
+  100%  {top: 0;}
+}
+
+/*  轮播图  */
+.slideshow{
+  height: 300rpx;
+}
+
+/*  排序按钮  */
+.sortButton {
+  height: 80rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  border-top: 1px solid #ECECEC;
+}
+
+.sortButton view {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.price view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.price view i:first-child {
+  height: 12rpx;
+  margin-bottom: -1rpx;
+}
+
+.price view i:last-child {
+  height: 50rpx;
+  margin-top: 10rpx;
+}
+.specificationsMask{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(74, 74, 74, .5);
+  position: fixed; 
+  top: 80rpx;
+  z-index: 100;
+  box-shadow: 0 4rpx 10rpx rgba(231, 231, 231, 0.65);
+  animation: activeSortAnimation .1s linear;
+}
+.specificationsMask view,.specificationsMaskOn view{
+  height: 70rpx;
+  font-size: 28rpx;
+  background-color: #fff;
+  color: #333;
+  line-height: 70rpx;
+  padding-left: 32rpx;
+  border-bottom: 1px solid #ECECEC;
+  position: relative;
+}
+.specificationsMask view icon,.specificationsMaskOn view icon{
+  position: absolute;
+  right: 30rpx;
+  color: #fff;
+}
+.specifications i {
+  margin-left: -8rpx;
+}
+
+.on {
+  color: #00a8e8 !important;
+}
+.activeSortClass{
+  color: #00a8e8 !important;
+}
+.iconActive{
+  color: #00a8e8 !important;
+}
+
+/* 品牌横向滚动 */
+.brandBox{
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+}
+.brandScrollView {
+  box-sizing: border-box;
+  height: 128rpx;
+  display: flex;
+  white-space: nowrap;
+  overflow: scroll;
+}
+
+.brand {
+  display: inline-block;
+}
+
+.brand view {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0 20rpx;
+  display: inline-block;
+  position: relative;
+  transform-style: preserve-3d; /*解决 因出现overflow: hidden; border-radius 失效*/
+  border-radius: 14rpx;  
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.brandImage {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: block;
+  border-radius: 8rpx;
+}
+
+.brandNameBox {
+  z-index: 1;
+  width: 100%;
+  height: 30rpx;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(51, 51, 51, 0.6);
+  font-size: 20rpx;
+}
+
+.brandName {
+  color: #fff;
+}
+
+.addBorder {
+  border-color: #00a8e8 !important;
+}
+
+/*  车辆list */
+.list{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 28rpx 23rpx 21rpx 25rpx;
+  background-color: #FFF;
+  font-size: 24rpx;
+  border-bottom: 1px solid #ECECEC;
+}
+.list:last-child{
+  border-bottom: none;
+}
+.list image{
+  width: 270rpx;
+  height: 170rpx;
+}
+.describe{
+  /*  解决 flexBox 因内容而撑大盒子  flex: 1 */
+  flex: 1;
+  margin-left: 16rpx;
+}
+.describe .carsModels{
+  color: #333;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.describe .species{
+  font-size: 22rpx;
+  color: #FFF;
+  padding: 4rpx;
+  border-radius: 2rpx;
+}
+.describe .speciesBlue{
+  background-color: #00A8E8;
+}
+.describe .speciesYellow{
+  background-color: #FA7921;
+}
+.describe .configurationPrice{
+  color: #666;
+}
+.describe .preferentialPrice text{
+  color: #FF4040;
+}
+.describe .theOriginalPrice{
+  color: #FA7921;
+}
+.findCar{
+  width: 95rpx;
+  height: 95rpx;
+  position: fixed;
+   bottom: 22rpx;
+  right: 22rpx; 
+}
+.findCar image{
+  width: 100%;
+}
+
+/*  滚动 scrollTop = 149 样式设置  */
+ .content{
+  position:fixed;
+  top:0; 
+  width:100%;
+  background-color: #F6F6F6;
+  animation: scorlTop 1s linear; 
+} 
+.bodyScroll{
+   position: fixed; 
+   top: 230rpx;
+   height: 80%;
+   overflow: scroll; 
+} 
+bodyScrollOn{
+  overflow: hidden; 
+}
+.specificationsMaskOn{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(74, 74, 74, .5);
+  position: absolute; 
+  z-index: 100;
+  animation: activeSortAnimation .1s ease-in-out;
+}
+ .lodding{
+  height: 50px;
+   padding-top: 16px; 
+  background-color: #fff;
+} 
+.box{
+  height: 100%;
+}

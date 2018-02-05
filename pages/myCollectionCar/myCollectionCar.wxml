@@ -1,0 +1,16 @@
+<view class='body'>
+  <view class='list' wx:for='{{myCollectionCarData}}' wx:key='{{*}}' wx:for-index='index' data-carId='{{item.carId}}' bindtap='carList'>
+    <image src='{{item.carImgUrl}}'></image>
+    <view class='describe'>
+      <text class='carsModels'>{{item.carsModels}}</text>
+      <text class="species {{item.species=='平行进口车' ? 'species speciesBlue' : 'species speciesYellow'}}">{{item.species}}</text>
+      <view class='configurationPrice'>配置价: {{item.configurationPrice}}万
+        <text class='preferentialPrice' wx:if='{{item.preferentialPrice}}'>/ <text>↓</text>{{item.preferentialPrice}}万</text>
+      </view>
+      <text class='theOriginalPrice'>￥{{item.theOriginalPrice}}万</text>
+      <view class='love' data-index='{{index}}' catchtap='love' animation='{{loveIndex == index ? carListAnimation : carListAnimation_no}}'>
+        <icon class='iconfont icon-shoucang' style='color:{{loveIndex == index ? "#333" : "#FF4040"}};'></icon>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,6 +1,7 @@
-<view class='head'>
-  <text>寻车</text>
-</view>
-<view class='body'>
-  
-</view>
+<swiper class='slideshow' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicatorDots="{{indicatorDots}}" circular="{{circular}}">
+  <block wx:for="{{imgUrls}}" wx:key="*">
+    <swiper-item>
+      <image src='{{item.url}}' data-link="{{item.link}}" bindtap="bindViewTap" style='width:100%; height:300rpx;'></image>
+    </swiper-item>
+  </block>
+</swiper>

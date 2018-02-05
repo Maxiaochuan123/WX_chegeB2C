@@ -1,6 +1,73 @@
-<view class='head'>
-  <text>商城</text>
+<scroll-view class='box' scroll-y="true" bindscroll='box'>
+<view wx:if='{{pageViewBanner == true}}'>
+  <!-- 轮播图 -->
+   <swiper class='slideshow' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicatorDots="{{indicatorDots}}" circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="*">
+      <swiper-item>
+        <image src='{{item.url}}' data-link="{{item.link}}" bindtap="bindViewTap" style='width:100%; height:300rpx;'></image>
+      </swiper-item>
+    </block>
+  </swiper> 
 </view>
-<view class='body'>
-  
+<view class='{{pageViewSort == true ? "content" : ""}}'>
+<!-- 排序按钮 -->
+  <view class='sortButton'>
+    <view class="{{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav1">默认排序</view>
+    <view class="specifications {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav2">规格 
+      <i class="iconfont {{!showActiveSortMask ? 'icon-xiajiantou' : 'on icon-shangjiantou'}}" data-current="1"></i>
+    </view>
+    <view class="price {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav3">价格
+      <view data-current="2">
+        <i class="iconfont icon-shangjiantou {{priceSortIcon == false ? 'on' : ''}}"></i>
+        <i class="iconfont icon-xiajiantou {{priceSortIcon == true ? 'on' : ''}}"></i>
+      </view>
+    </view> 
+  </view>
+  <!-- 品牌横向滚动  -->
+  <view class='brandBox'>
+    <scroll-view class='brandScrollView' scroll-x="true">
+      <view class='brand'>
+        <view class='{{addCarBorder == index ? "addBorder" : ""}}' wx:for='{{carList}}' wx:for-item="item" wx:for-index='index' wx:key='*' data-index='{{index}}' data-carName='{{item.carName}}' bindtap='brandSort'>
+          <image class='brandImage' src='{{addCarBorder == 0 ? item.carImgActive : item.carImg}}'></image> 
+          <text class='brandNameBox'>
+            <text class='brandName'>{{item.carName}}</text>
+          </text>
+        </view>
+      </view>
+    </scroll-view> 
+  </view>
 </view>
+<!--  筛选遮罩层  -->
+<view class='{{pageViewSort == true ? "specificationsMask" : "specificationsMaskOn"}}' wx:if='{{(currentTab == "1" && showActiveSortMask != false)}}'>
+  <view class='{{activeSortNuber == 0 ? "activeSortClass" : ""}}' data-activeIndex='0' bindtap='addActiveSortClass'>默认排序 <icon class='iconfont icon-duihao {{activeSortNuber == 0 ? "iconActive" : ""}}'></icon></view>
+  <view class='{{activeSortNuber == 1 ? "activeSortClass" : ""}}' data-activeIndex='1' bindtap='addActiveSortClass'>中规 
+    <icon class='iconfont icon-duihao {{activeSortNuber == 1 ? "iconActive" : ""}}'></icon>
+    
+  </view>
+  <view class='{{activeSortNuber == 2 ? "activeSortClass" : ""}}' data-activeIndex='2' bindtap='addActiveSortClass'>平行进口 <icon class='iconfont icon-duihao {{activeSortNuber == 2 ? "iconActive" : ""}}'></icon></view>
+</view>
+
+<scroll-view class='{{pageViewSort == true ? "bodyScroll" : "bodyScrollOn"}}' scroll-y="true" bindscrolltoupper='scrollViewTop' bindscrolltolower='scrollViewBottom' upper-threshold='4' lower-threshold='4'>
+  <view class='list' wx:for='{{myCollectionCarData}}' wx:key='{{item}}'>
+    <image src='{{item.carImgUrl}}'></image>
+    <view class='describe'>
+      <text class='carsModels'>{{item.carsModels}}</text>
+      <text class="species {{item.species=='平行进口车' ? 'species speciesBlue' : 'species speciesYellow'}}">{{item.species}}</text>
+      <view class='configurationPrice'>配置价: {{item.configurationPrice}}万
+        <text class='preferentialPrice' wx:if='{{item.preferentialPrice}}'>/ <text>↓</text>{{item.preferentialPrice}}万</text>
+      </view>
+      <text class='theOriginalPrice'>￥{{item.theOriginalPrice}}万</text>
+    </view>
+  </view>
+
+  <!--  找车按钮  -->
+  <view class='findCar' bindtap='go_findCar'>
+    <image src='../../icon/findCar.png' mode='widthFix'></image>
+  </view>
+
+  <!--  底部lodding  -->
+   <view class='lodding'>
+    <buttom-Lodding id='lodding' hidden='{{isShowLodding}}' contentText='{{contentText}}' isShowLoddingImage='{{isShowLoddingImage}}'></buttom-Lodding>
+   </view> 
+ </scroll-view> 
+  </scroll-view> 

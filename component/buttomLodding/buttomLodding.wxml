@@ -1,0 +1,7 @@
+<!-- 自定义底部 Lodding 组件 -->
+<view class='buttomLodding' hidden='{{!isShowLodding}}'>
+<view hidden='{{!isShowLoddingImage}}'>
+  <image src='../../icon/lodding.gif'></image>
+</view>
+  <text>{{contentText}}</text>
+</view>

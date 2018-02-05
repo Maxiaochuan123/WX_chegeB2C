@@ -1,0 +1,71 @@
+.body{
+  margin: 20rpx 0;
+  font-size: 24rpx;
+}
+.list{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 28rpx 23rpx 21rpx 25rpx;
+  background-color: #FFF;
+  border-bottom: 1px solid #ECECEC;
+}
+.list:last-child{
+  border-bottom: none;
+}
+.list image{
+  width: 270rpx;
+  height: 170rpx;
+}
+.describe{
+  /*  解决 flexBox 因内容而撑大盒子  flex: 1 */
+  flex: 1;
+  margin-left: 16rpx;
+  position: relative;
+}
+.describe .carsModels{
+  color: #333;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.describe .species{
+  font-size: 22rpx;
+  color: #FFF;
+  padding: 4rpx 8rpx;
+  border-radius: 2rpx;
+}
+.describe .speciesBlue{
+  background-color: #00A8E8;
+}
+.describe .speciesYellow{
+  background-color: #FA7921;
+}
+.describe .configurationPrice{
+  color: #666;
+}
+.describe .preferentialPrice text{
+  color: #FF4040;
+}
+.describe .theOriginalPrice{
+  color: #FA7921;
+}
+.describe .love{
+  position: absolute;
+  right: 0;
+  bottom: 10rpx;
+  width: 90rpx;
+  height: 80rpx;
+}
+.describe .love icon{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  /* width: 44rpx;
+  height: 40rpx; */
+  font-size: 44rpx;
+}
+/* .describe .love:active{
+  opacity: .1;
+} */

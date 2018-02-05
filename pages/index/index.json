@@ -2,5 +2,8 @@
   "navigationBarTitleText": "首页",
   "enablePullDownRefresh": true,
   "onReachBottomDistance": 0,
-  "backgroundTextStyle": "dark"
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "buttom-Lodding": "../../component/buttomLodding/buttomLodding"
+  }
 }

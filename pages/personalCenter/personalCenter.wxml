@@ -1,6 +1,42 @@
 <view class='head'>
-  <text>个人中心</text>
+  <view class='myBanner'>
+      <image class='backImg' src='../../images/myBackground.jpg'></image>
+      <image class='myHeadIs' src='../../icon/person_head.png' bindtap='go_login'></image>
+      <text class='loginStatusDescription'>点击头像登录</text>
+		<!-- {{wxUserInfoData.wxUserName}}    {{wxUserInfoData.wxUserHeadPortrait}} -->
+  </view>
 </view>
 <view class='body'>
-  
+  <view class='myCollectionAndAppointment'>
+    <view class='collection' bindtap='go_myCollectionCar'>
+      <image src='../../icon/dianZan.png'></image>
+      <text>我收藏的车辆</text>
+    </view>
+    
+    <view class='toMakeAnAppointment' bindtap='go_myReservationVehicle'>
+      <image src='../../icon/time.png'></image>
+      <text>我预约的车辆</text>
+    </view>
+  </view>
+  <view class='list' bindtap='go_myFindCar'>
+    <view class='describe'>
+      <image src='../../icon/banGong.png'></image>
+      <text>我的找车</text>
+    </view>
+    <view class='listArrow'>
+       <view class='arrow'></view> 
+    </view>
+  </view>
+  <view class='list'>
+    <view class='describe'>
+      <view class='box'>
+        <image src='../../icon/email.png'></image>
+        <text>我的消息</text>
+      </view>
+      <button class='customerService' open-type='contact'></button>
+    </view>
+    <view class='listArrow'>
+       <view class='arrow'></view> 
+    </view>
+  </view>
 </view>

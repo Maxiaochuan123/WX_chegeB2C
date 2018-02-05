@@ -1,0 +1,31 @@
+<view class='head'>
+  <view class='swiper-container'>  
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicatorDots="{{indicatorDots}}" circular="{{circular}}" bindchange='swiperChange' class='swiper'>  
+    <block wx:for='{{imgUrls}}' wx:key='*'>  
+      <swiper-item class='swiper-item'>  
+        <image class='swiperImg' src='{{item.url}}' style='width:100%;' mode='widthFix'></image>
+        <text class='swiperText'>{{index == swiperCurrent ? item.text : ""}}</text>
+      </swiper-item>  
+    </block>  
+    </swiper>   
+    <view class='dots'>  
+      <block wx:for='{{imgUrls}}' wx:key='*'>
+        <view class='dot{{index == swiperCurrent ? " active" : ""}}'></view>  
+      </block>  
+    </view>
+  </view>
+</view>
+<view class='body'>
+  <view class='list' bindtap='go_informationForDetails'>
+    <image class='listImage' src='../../images/aodiA7.jpg'></image>
+    <view class='listDescribe'>
+      <text>固态电池能否成为汽车超燃油车的最大希望？固态电池能否成为汽车超燃油车的最大希望</text>
+      <view>
+        <!-- <image src='../../icon/comments.png'></image> -->
+        <icon class='iconfont icon-shejiwenzhang201'></icon>
+        <text class='comments'>新车</text> 
+        <text class='commentsSource'>一猫汽车网</text> 
+      </view>
+    </view>
+  </view>
+</view>

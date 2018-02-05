@@ -1,0 +1,56 @@
+/*  头部  */
+.detailsTitle{
+  margin-top: 20px;
+  padding: 25rpx 25rpx 0;
+  border-top: 1px solid #ECECEC;
+}
+.detailsTitle, .detailsContent{
+  box-sizing: border-box;
+  width: 100%;
+  color: #333;
+  background-color: #fff; 
+}
+.detailsContent{
+  padding: 0 25rpx 25rpx;
+  border-bottom: 1px solid #ECECEC;
+}
+.detailsTitle > text{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 30rpx;
+}
+.theSource image{
+  width: 18rpx;
+  height: 20rpx;
+  vertical-align:middle;
+}
+.theSource text{
+  font-size: 22rpx;
+  vertical-align:middle;
+}
+.source{
+  margin-left: 11rpx;
+}
+.sourceName,.sourceTime{
+  margin-left: 31rpx;
+}
+
+/*  内容  */
+.detailsContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 26rpx;
+}
+.detailsContent text{
+  font-size: 28rpx;
+  text-indent: 56rpx;
+}
+.detailsContent image{
+  width: 620rpx;
+  height: 367rpx;
+  margin: 43rpx 0;
+}

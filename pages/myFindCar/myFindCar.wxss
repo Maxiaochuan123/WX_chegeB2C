@@ -1,0 +1,21 @@
+.list{
+  color: #333;
+  background-color: #FFF;
+  font-size: 24rpx;
+  padding: 25rpx 24rpx 10rpx;
+  margin: 20rpx 0;
+}
+.brand text:first-child,.carsModels text:first-child{
+  color: #00A8E8;
+  margin-right: 17rpx;
+}
+.carsModels{
+  padding-bottom: 10rpx;
+  border-bottom: 1px solid #ECECEC;
+}
+.theDateOf{
+  display: inline-block;
+  padding-top: 10rpx;
+  width: 100%;
+  text-align: right;
+}

@@ -1,0 +1,16 @@
+<view class='login'>
+	 	<image src='../../icon/login_bg.png' class='login_bg'></image>
+		<view class='login_div'>
+			<image src='../../icon/login_logo.png'></image>
+			<view class='login_input'>
+			 		<input type='number' placeholder="无需注册，输入手机号即可登录" auto-focus placeholder-class="placeholders" />
+					<view class='login_codebtn'>
+						<input type='number' placeholder="请输入验证码" placeholder-class="placeholders"/>
+						<button class='login_code' data-id='2' bindtap='getThisCode'>{{time}}</button>
+					</view>
+					<button class='login_btn' bindtap='login'>登录</button>
+			</view>
+		</view>
+    <!-- 自定义组件 -->
+    <shwo-tost id='showToast' contentText='{{contentText}}'></shwo-tost>
+</view>

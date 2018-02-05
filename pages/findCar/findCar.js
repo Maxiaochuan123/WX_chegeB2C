@@ -5,7 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    // 轮播
+    imgUrls: [
+      {
+        url: '../../images/indexBannerCar1.jpg',
+        link: '../shoppingMall/shoppingMall'
+      },
+      {
+        url: '../../images/indexBannerCar1.jpg',
+        link: '../findCar/findCar'
+      },
+      {
+        url: '../../images/indexBannerCar1.jpg',
+        link: '../message/message'
+      }
+    ],
+
+    indicatorDots: false,//显示圆点
+    autoplay: true,//自动滚动
+    circular: true,//滑动衔接
+    interval: 2500,//切换时间间隔
+    duration: 500,//滑动时长
   },
 
   /**

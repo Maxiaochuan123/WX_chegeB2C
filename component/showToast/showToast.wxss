@@ -1,0 +1,17 @@
+.toast_box{
+	position: fixed;
+	left:0;
+	bottom:20%;
+	text-align:center;
+	width:100%;
+	z-index:10;
+}
+.toast_div{
+	display: inline-block;
+	margin:0 auto;
+	padding:3rpx 15rpx;
+	background:#999;
+	color:#fff;
+	font-size:32rpx;
+	border-radius:10rpx;
+}

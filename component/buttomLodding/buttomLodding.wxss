@@ -1,0 +1,30 @@
+/*  定义旋转动画  */
+/* @keyframes rotating{
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+} */
+
+.buttomLodding{
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+ .buttomLodding image{
+  display: block;
+  width: 30rpx;
+  height: 30rpx;
+
+  /*  写入动画  */
+  /* animation: rotating 1s linear infinite; */
+}
+.buttomLodding text{
+  font-size: 24rpx;
+  color: #333;
+  margin-left: 20rpx;
+} 
